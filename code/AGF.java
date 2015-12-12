@@ -4,23 +4,21 @@ import static java.lang.Math.pow;
 class AGF {
     // Read base from file.
     public static  double[][] base;
-    //public AGF(){
-        
-        //    }
+
     // The centers are represented as a two dimensional array.
     // The number of rows represent the number of centers, while
     // the number of columns represent the number of coordinates.
     // Las letras representan las coordenadas en el espacio 12-dimensional de los centros
     public static double F01(double A1, double A2, double A3, double A4,  double A5,  double A6,
-                       double A7, double A8, double A9, double A10, double A11, double A12,
-                       double B1, double B2, double B3, double B4,  double B5,  double B6,
-                       double B7, double B8, double B9, double B10, double B11, double B12,
-                       double C1, double C2, double C3, double C4,  double C5,  double C6,
-                       double C7, double C8, double C9, double C10, double C11, double C12,
-                       double D1, double D2, double D3, double D4,  double D5,  double D6,
-                       double D7, double D8, double D9, double D10, double D11, double D12,
-                       double E1, double E2, double E3, double E4,  double E5,  double E6,
-                       double E7, double E8, double E9, double E10, double E11, double E12)
+                             double A7, double A8, double A9, double A10, double A11, double A12,
+                             double B1, double B2, double B3, double B4,  double B5,  double B6,
+                             double B7, double B8, double B9, double B10, double B11, double B12,
+                             double C1, double C2, double C3, double C4,  double C5,  double C6,
+                             double C7, double C8, double C9, double C10, double C11, double C12,
+                             double D1, double D2, double D3, double D4,  double D5,  double D6,
+                             double D7, double D8, double D9, double D10, double D11, double D12,
+                             double E1, double E2, double E3, double E4,  double E5,  double E6,
+                             double E7, double E8, double E9, double E10, double E11, double E12)
     {
         // Generate the centers matrix
         double[][] centers = {
