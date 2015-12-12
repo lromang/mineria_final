@@ -16,7 +16,7 @@ public class EGA {
   static int maxN=500,minN=1;
   static int maxE=15, minE=0;
   static int maxD=60, minD=0;
-  static int maxV=50, minV=1;
+  static int maxV=100, minV=1;
   static double maxPc=1f, minPc=.01f;
   static double maxPm=1f, minPm=.001f;
   static int maxG=10000, minG=1;
@@ -82,6 +82,19 @@ public class EGA {
   
   public static void Evalua(double fitness[],String genoma[]) throws Exception{
 	double F=0;int Best;
+
+        // Testing matrix
+        double[][] matriz = {{1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0},
+                             {1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0},
+                             {1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0},
+                             {1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0},
+                             {1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0}
+        };
+        
+	AGF algen = new AGF();
+        algen.base = matriz;
+
+        // Prof code
 	for (int i=0;i<N;i++){
 		if (FN!=23) GetFenotiposOfGenoma(i);
 		switch(FN) {
@@ -312,7 +325,7 @@ public class EGA {
 				catch (Exception e){
 					continue;
 				}//endCatch
-				if (Opcion<1|Opcion>9)
+				if (Opcion < 1 | Opcion > 61)
 					continue;
 				//endIf
 				System.out.print("Nuevo valor:     ");

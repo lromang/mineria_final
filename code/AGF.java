@@ -3,12 +3,15 @@ import static java.lang.Math.pow;
 
 class AGF {
     // Read base from file.
-    public static double[][] base;
+    public static  double[][] base;
+    //public AGF(){
+        
+        //    }
     // The centers are represented as a two dimensional array.
     // The number of rows represent the number of centers, while
     // the number of columns represent the number of coordinates.
     // Las letras representan las coordenadas en el espacio 12-dimensional de los centros
-    public  double F01(double A1, double A2, double A3, double A4,  double A5,  double A6,
+    public static double F01(double A1, double A2, double A3, double A4,  double A5,  double A6,
                        double A7, double A8, double A9, double A10, double A11, double A12,
                        double B1, double B2, double B3, double B4,  double B5,  double B6,
                        double B7, double B8, double B9, double B10, double B11, double B12,
@@ -29,10 +32,10 @@ class AGF {
         };
         int        nrow          = base.length;       // Number of rows of base.
         double[]   dist_ind      = new double[nrow];  // Array of distance between individuals and centers.
-        int        distCluster   = 0;                 // Keeps record of final distance to centers.
+        double     distCluster   = 0;                 // Keeps record of final distance to centers.
         double     min           = 1e12;              // Minimum distance found between individuals and centers.
         int[]      clust_class   = new int[nrow];     // Array of  classes of individuals.
-        int        sum           = 0;                 // Keeps record of distance to centers.
+        double     sum           = 0;                 // Keeps record of distance to centers.
         double[]   dist_mean     = new double[nrow];  // Array of mean distance to centers.
         double[]   dist_var      = new double[nrow];  // Array of variance of distances to centers.
         int        in_cluster    = 0;                 // Keeps record of individuals in clusters.
@@ -85,7 +88,7 @@ class AGF {
 
 
     
-  public  double F02(double X){
+  public static  double F02(double X){
   double Y;
   /*
    * (2)
@@ -114,7 +117,7 @@ class AGF {
    return 10000000000d;
   }//endF02
 
-  public  double F03(double X,double Y){
+  public  static double F03(double X,double Y){
 /*
  * (3)
  *
@@ -135,7 +138,7 @@ class AGF {
  	return -(X-5)*(X-5)-(Y-3)*(Y-3);
   }//endF03
 
-  public  double F04(double X,double Y){
+  public  static double F04(double X,double Y){
 /*
  * (4)
  *
@@ -173,7 +176,7 @@ class AGF {
 	return Z;
   }//endF04
 
-  public  double F05(double X, double Y){
+  public  static double F05(double X, double Y){
 /*
  * (5)
  *
